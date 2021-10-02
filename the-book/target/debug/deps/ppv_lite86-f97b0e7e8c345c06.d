@@ -1,9 +1,0 @@
-/Users/caixiaowen/Downloads/code/github/rust-snippet/the-book/target/debug/deps/ppv_lite86-f97b0e7e8c345c06.rmeta: /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/lib.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/soft.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/types.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/x86_64/mod.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/x86_64/sse2.rs
-
-/Users/caixiaowen/Downloads/code/github/rust-snippet/the-book/target/debug/deps/ppv_lite86-f97b0e7e8c345c06.d: /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/lib.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/soft.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/types.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/x86_64/mod.rs /Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/x86_64/sse2.rs
-
-/Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/lib.rs:
-/Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/soft.rs:
-/Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/types.rs:
-/Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/x86_64/mod.rs:
-/Users/caixiaowen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/ppv-lite86-0.2.10/src/x86_64/sse2.rs:

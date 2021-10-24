@@ -4,5 +4,6 @@ members = [
     "main",
     "hello-cargo",
     "pkgs-crate",
-    "life-cycle"
+    "life-cycle",
+    "tester"
 ]

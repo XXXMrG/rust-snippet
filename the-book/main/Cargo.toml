@@ -10,3 +10,4 @@ rand = "0.8.3"
 hello-cargo = { path = "../hello-cargo" }
 pkgs-crate = { path = "../pkgs-crate" }
 life-cycle = { path = "../life-cycle" }
+tester = { path = "../tester" }

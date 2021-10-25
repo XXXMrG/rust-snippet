@@ -20,6 +20,8 @@ jobs:
       run: cd the-book && cargo build --verbose
     - name: Run tests
       run: cd the-book && cargo test --verbose
+    - name: Check code style
+      run: cd the-book && cargo fmt --all -- --check
 
   build_minigrep:
 
@@ -31,3 +33,5 @@ jobs:
       run: cd minigrep && cargo build --verbose
     - name: Run tests
       run: cd minigrep && cargo test --verbose
+    - name: Check code style
+      run: cd minigrep && cargo fmt --all -- --check

@@ -1,11 +1,10 @@
-/// ch.7 packages and crate
-
-mod front_of_house;
 mod back_of_house;
+/// ch.7 packages and crate
+mod front_of_house;
 
 // 重导出一个 mod 供外部调用
+pub use crate::back_of_house::{Appetizer, Breakfast};
 pub use crate::front_of_house::hosting;
-pub use crate::back_of_house::{Breakfast, Appetizer};
 
 pub fn eat_at_restaurant() {
     hosting::add_to_waitlist();

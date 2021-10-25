@@ -11,11 +11,11 @@ impl Breakfast {
     pub fn summer(toast: &str) -> Breakfast {
         Breakfast {
             toast: String::from(toast),
-            seasonal_fruit: String::from("peach")
+            seasonal_fruit: String::from("peach"),
         }
     }
 
-    pub fn log(&self) -> &String{
+    pub fn log(&self) -> &String {
         // brow it
         &self.seasonal_fruit
     }

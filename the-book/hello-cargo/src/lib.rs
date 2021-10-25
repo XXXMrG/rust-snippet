@@ -1,5 +1,4 @@
 /// ch.2 guess-number
-
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;

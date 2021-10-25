@@ -10,13 +10,24 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
+  build_the_book:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: cargo build --verbose
+      run: cd the-book && cargo build --verbose
     - name: Run tests
-      run: cargo test --verbose
+      run: cd the-book && cargo test --verbose
+
+  build_minigrep:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: cd minigrep && cargo build --verbose
+    - name: Run tests
+      run: cd minigrep && cargo test --verbose

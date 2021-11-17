@@ -46,6 +46,24 @@ mod tests {
     }
 }
 
+/// # Cacher
+///
+/// ## Examples
+/// ```
+///
+/// use functional::Cacher;
+///
+/// let mut count = 0;
+/// let mut cacher_result = Cacher::new(|num| {
+///     count += 1;
+///     num
+/// });
+///
+/// assert_eq!(cacher_result.value(2), 2);
+/// assert_eq!(cacher_result.value(2), 2);
+///
+/// assert_eq!(count, 1);
+/// ```
 pub struct Cacher<T>
 where
     T: FnMut(u32) -> u32,

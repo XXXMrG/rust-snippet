@@ -6,5 +6,6 @@ members = [
     "pkgs-crate",
     "life-cycle",
     "tester",
-    "functional"
+    "functional",
+    "concurrent"
 ]

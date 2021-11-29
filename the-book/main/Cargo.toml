@@ -12,3 +12,4 @@ pkgs-crate = { path = "../pkgs-crate" }
 life-cycle = { path = "../life-cycle" }
 tester = { path = "../tester" }
 functional = { path = "../functional" }
+concurrent = { path = "../concurrent" }

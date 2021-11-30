@@ -7,5 +7,6 @@ members = [
     "life-cycle",
     "tester",
     "functional",
-    "concurrent"
+    "concurrent",
+    "oop",
 ]

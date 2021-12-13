@@ -1,6 +1,7 @@
 # rust-snippet
 ---
-some rust code to learn this language.
+some code to learn rust language.
+
 
 from ["the book"](https://doc.rust-lang.org/book/)
 

@@ -1,5 +1,7 @@
 # rust-snippet
 ---
-just some rust code
+some rust code to learn this language.
+
+from ["the book"](https://doc.rust-lang.org/book/)
 
 use cargo workspace

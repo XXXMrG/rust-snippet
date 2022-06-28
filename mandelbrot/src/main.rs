@@ -1,3 +1,4 @@
+extern crate crossbeam;
 extern crate image;
 extern crate num;
 
@@ -5,8 +6,8 @@ use image::png::PNGEncoder;
 use image::ColorType;
 use num::Complex;
 use std::fs::File;
-use std::str::FromStr;
 use std::io::Write;
+use std::str::FromStr;
 
 fn escape_time(c: Complex<f64>, limit: u32) -> Option<u32> {
     let mut z = Complex { re: 0.0, im: 0.0 };
@@ -96,7 +97,11 @@ fn main() {
     let args: Vec<String> = std::env::args().collect();
 
     if args.len() != 5 {
-        writeln!(std::io::stderr(), "Usage: mandelbrot FILE PIXEL UPPERLEFT LOWERRIGHT").unwrap();
+        writeln!(
+            std::io::stderr(),
+            "Usage: mandelbrot FILE PIXEL UPPERLEFT LOWERRIGHT"
+        )
+        .unwrap();
         std::process::exit(1);
     }
 
@@ -107,7 +112,28 @@ fn main() {
 
     let mut pixels = vec![0; bounds.0 * bounds.1];
 
-    render(&mut pixels, bounds, upper_left, lower_right);
+    let threads = 8;
+    let rows_per_bound = bounds.1 / threads + 1;
+
+    {
+        let bands: Vec<&mut [u8]> = pixels.chunks_mut(rows_per_bound * bounds.0).collect();
+        println!("bands length: {}", bands.len());
+
+        crossbeam::scope(|spawner| {
+            for (i, band) in bands.into_iter().enumerate() {
+                let top = rows_per_bound * i;
+                let height = band.len() / bounds.0;
+                let band_bounds = (bounds.0, height);
+                let band_upper_left = pixel_to_point(bounds, (0, top), upper_left, lower_right);
+                let band_lower_right =
+                    pixel_to_point(bounds, (bounds.0, top + height), upper_left, lower_right);
+
+                spawner.spawn(move || {
+                    render(band, band_bounds, band_upper_left, band_lower_right);
+                });
+            }
+        })
+    }
 
     write_image(&args[1], &pixels, bounds).expect("error");
 }
